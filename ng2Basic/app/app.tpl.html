@@ -1,0 +1,35 @@
+<h1>{{title}}</h1>
+<h2>{{header}}</h2>
+<hr>
+<h3>Course Object Info</h3>
+<strong>Id: </strong> {{course.id}} <br>
+<strong>Name: </strong> {{course.name}} <br>
+<strong>Duration: </strong> {{course.duration}} <br>
+<strong>Cost: </strong> {{course.cost}} <br>
+<hr>
+<h3>Course Names</h3>
+<ul>
+    <li *ngFor="#i of courseNames">
+        {{i}}
+    </li>
+</ul>
+
+<hr>
+<h3>List of courses</h3>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Duration</td>
+        <td>Cost</td>
+    </tr>
+    <tr *ngFor="#c of courses" (click)="getCourseByID(c)">
+         <td><a href="">{{c.id}}</a></td>
+        <td>{{c.name}}</td>
+        <td>{{c.duration}}</td>
+        <td>{{c.cost}}</td>
+    </tr>
+</table>
+<hr>
+<h3>Event Binding</h3>
+<button (click)="clickme('ajay')">Click ME</button>
