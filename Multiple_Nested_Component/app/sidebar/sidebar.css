@@ -1,0 +1,25 @@
+aside{
+    float: left;
+}
+aside ul{
+    list-style-type: none;
+    width: 150px;
+    margin: 0 !important;
+    padding: 0;
+}
+aside li{       
+    background-color:lightblue;
+    padding: 10px;
+    font-size: 14px;        
+    border-radius: 4px;
+    margin-bottom: 1px;        
+}
+aside li:hover{    
+    background-color:darkblue;
+    color:white;
+    font-weight: bold;
+}
+aside a{
+    text-decoration: none;
+    cursor: pointer;
+}
