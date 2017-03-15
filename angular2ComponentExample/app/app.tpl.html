@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+<h2>{{header}}</h2>
+<hr>
+<strong>Id: {{sports.id}}</strong>
+<br>
+<strong>Name: {{sports.name}}</strong>
+<br>
+<strong>No of Players: {{sports.players}}</strong>
+<hr>
+<h3> Tennis Players </h3>
+<ul>
+    <li *ngFor="#i of tennisPlayers">
+        {{i}}
+    </li>
+</ul>    
+<hr>
+<h3>Grandslams </h3>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Location </th>
+    </tr>
+    <tr *ngFor="#g of granSlam" (click)="getGsById(g)">
+        <td><a href="">{{g.Name}}</a></td>
+       <td>{{g.Location}}</td> 
+</tr> 
+</table>
+<hr>
+<button (click)="Clickme('krishna')"> Press here </button>
