@@ -6,5 +6,5 @@ import {Component} from 'angular2/core';
     styleUrls: ['app/sidebar/sidebar.css']
 })
 export class SidebarComponent {
-    sidebarItems = ['Angular 1', 'Angular 2', 'Bootstrap', 'Gulp', 'Node', 'Grunt', 'Knockout'];
+    sidebarItems = ['Project 1', 'Project 2', 'Project 3','Project 4'];
 }
