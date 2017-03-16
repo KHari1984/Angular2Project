@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+<h2>{{header}}</h2>
+<hr>
+<input type="text" [(ngModel)]="name">
+<br>
+<strong>Hello  {{name}}, how are you?<strong>
+Doing good? <input type="checkbox" [(ngModel)]="fellingWell">
+<hr>
+User Name: <input type="text" [(ngModel)]="user.uname">
+<br>
+Password: <input type="text" [(ngModel)]="user.pwd">
+<button (click)="login()"> Log Me In</button>
+
+<hr>
+Age:<select [(ngModel)]="ageRange">
+    <option value="under 18">Under 18 </option>
+    <option value="18-25">18-25</option>
+    <option value="26-34">26-34</option>
+    <option value="35-50">35-50</option>
+  <option value="above 50">Above 50</option>
+</select>
+<span> {{ageRange}}
