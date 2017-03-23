@@ -1,0 +1,15 @@
+.course-class{
+    padding: 10px;
+}
+.course-class span{
+margin-right: 10px;
+
+}
+.exp-course{
+    background-color: red;
+    color: #fff;
+}
+.budget-course{
+    background-color: blue;
+    color: #fff;
+}
