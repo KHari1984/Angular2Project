@@ -1,0 +1,42 @@
+<h1>{{title}}</h1>
+<h2>{{header}}</h2>
+<hr>
+<h2>Upper/Lower Pipe</h2>
+<span>{{nameinLower | uppercase}}</span><br>
+<span>{{nameinUpper |lowercase}}</span>
+
+<hr>
+<h2>DateTime</h2>
+<span>{{today}}</span> <br>
+<span>{{today |date}}</span> <br>
+<span>{{today |date:'fullDate'}}</span> <br>
+<span>{{today |date:'shortDate'}}</span> <br>
+<span>{{today |date:'MM/dd/yyyy'}}</span> <br>
+<span>{{today |date:'hh:mm:ss'}}</span> <br>
+
+
+<hr>
+<h2>Currency</h2>
+<span>{{amount | currency:'USD':true}}</span><br>
+<span>{{amount | currency:'EUR':true}}</span><br>
+<span>{{amount | currency:'INR':true}}</span><br>
+
+<hr>
+<h2>Slice</h2>
+<ul>
+    <li *ngFor="#c of courses | slice:5:10">
+        {{c}}
+    </li>
+</ul>
+
+<hr>
+<h2>Custom Pipe:- First Name Uppper</h2>
+<span>{{nameinLower | fnu}}</span>
+
+<hr>
+<h2>custom Pipe:- Search</h2>
+<ul>
+    <li *ngFor="#n of nameArray  | search:'u'">
+        {{n}}
+    </li>
+</ul>

@@ -1,0 +1,43 @@
+<h1>{{title}}</h1>
+<h2>{{header}}</h2>
+<hr>
+<h2>ngIf</h2>
+FromValue<input type="text" [(ngModel)]="fromValue"> <br> 
+ToValue <input type="text" [(ngModel)]="toValue">  
+<ul>
+    <li *ngFor="#c of courses">
+       <div class="course-class" 
+       *ngIf="c.cost>=fromValue && c.cost<=toValue">
+           <span>{{c.id}}</span><span>{{c.name}}</span><span>{{c.cost}}</span><span>{{c.duration}}</span>
+        </div> 
+    </li>
+</ul>
+
+<hr>
+<h2>ngClass</h2>
+
+<ul>
+    <li *ngFor="#c of courses">
+       <div class="course-class" 
+       [ngClass]="{'exp-course':c.cost>400,'budget-course':c.cost>=300 && c.cost<=400}">
+           <span>{{c.id}}</span><span>{{c.name}}</span><span>{{c.cost}}</span><span>{{c.duration}}</span>
+        </div> 
+    </li>
+</ul>
+
+<hr>
+<h2>ngstyle</h2>
+<input type="text" [(ngModel)]="color">
+<select [(ngModel)]="fontSize">
+    <option value="14">14px</option>
+    <option value="18">18px</option>
+    <option value="22">22px</option>
+    <option value="24">24px</option>
+    <option value="28">28px</option>
+    <option value="32">32px</option>
+    <option value="36">36px</option>
+    <option value="40">40px</option>
+    
+</select>
+ <p [ngStyle]="{'color':'orange','font-size':'24','font-weight':'bold'}">Hello World... welcome to my angular 2.0 </p>
+ <p [ngStyle]="{'color':color,'font-size':fontSize,'font-weight':'bold'}">Hello World... welcome to my angular 2.0 </p>
