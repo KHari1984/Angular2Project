@@ -9,7 +9,7 @@
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
 
   },
-  "author": "krishna",
+  "author": "ajay",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^1.0.0",
