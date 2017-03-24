@@ -1,0 +1,39 @@
+<table>
+    <tr>
+        <td>ID</td>
+        <td><input type="text" [(ngModel)]="user.id"></td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td><input type="text" [(ngModel)]="user.name"></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><input type="text" [(ngModel)]="user.email"></td>
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td><input type="text" [(ngModel)]="user.phone"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button (click)="addUser()">Add</button></td>
+        <td><button (click)="popUser()">Delete Last</button></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Phone</td>
+       
+    </tr>
+    <tr *ngFor="#u of users">
+        <td>{{u.id}}</td>
+        <td>{{u.name}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.phone}}</td>
+        <td><button (click)="delete(u)">Delete Row Id: {{u.id}}</button></td>
+    </tr>
+</table>

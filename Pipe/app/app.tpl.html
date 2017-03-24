@@ -30,13 +30,14 @@
 </ul>
 
 <hr>
-<h2>Custom Pipe:- First Name Uppper</h2>
+<h2>Custom Pipe:- First Name Upper</h2>
 <span>{{nameinLower | fnu}}</span>
 
 <hr>
 <h2>custom Pipe:- Search</h2>
+<input type="text" [(ngModel)]="svalue">
 <ul>
-    <li *ngFor="#n of nameArray  | search:'u'">
+    <li *ngFor="#n of nameArray  | search:svalue">
         {{n}}
     </li>
 </ul>
