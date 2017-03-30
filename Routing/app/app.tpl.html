@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+<p>{{header}}</p>
+
+<hr>
+<!--create routes-->
+<nav>
+    <ul>
+        <li><a [routerLink]="['Home']">Home</a></li>
+        <li><a [routerLink]="['Course',{cname:'Angular2',duration:'24hrs'}]">Courses</a></li>
+        <li><a [routerLink]="['Trainers']">Trainers</a></li>
+        <li><a [routerLink]="['Login',{uname:'krishna',type:'Admin'}]">Login</a></li>
+        <li><a [routerLink]="['Service']">Services</a></li>
+    </ul>
+</nav>
+<!--create place holder to host content pages/content components-->
+<div>
+    <router-outlet>
+            <!--all the content components like homecomponent,aboutcomponent will load here -->
+    </router-outlet>
+</div>
