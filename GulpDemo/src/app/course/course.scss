@@ -1,0 +1,30 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #fff;
+$bg-color: blue;
+$nav-width:750px;
+
+
+nav {
+    background-color: $bg-color;
+    width: $nav-width;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { 
+      display: inline-block;
+      width: 150px/$nav-width*100; 
+      margin-left: 40px;
+
+     }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: $primary-color;
+    font-family: $font-stack;
+}
+}

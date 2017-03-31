@@ -1,0 +1,31 @@
+nav {
+  background-color: blue;
+  width: 750px; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  nav li {
+    display: inline-block;
+    width: 20;
+    margin-left: 40px; }
+  nav a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #fff;
+    font-family: Helvetica, sans-serif; }
+
+.message, .success, .error, .warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333; }
+
+.success {
+  border-color: green; }
+
+.error {
+  border-color: red; }
+
+.warning {
+  border-color: yellow; }

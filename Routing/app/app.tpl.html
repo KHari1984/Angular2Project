@@ -1,20 +1,35 @@
-<h1>{{title}}</h1>
-<p>{{header}}</p>
 
-<hr>
-<!--create routes-->
-<nav>
-    <ul>
-        <li><a [routerLink]="['Home']">Home</a></li>
-        <li><a [routerLink]="['Course',{cname:'Angular2',duration:'24hrs'}]">Courses</a></li>
-        <li><a [routerLink]="['Trainers']">Trainers</a></li>
-        <li><a [routerLink]="['Login',{uname:'krishna',type:'Admin'}]">Login</a></li>
-        <li><a [routerLink]="['Service']">Services</a></li>
-    </ul>
-</nav>
+<div class="container">
+     <nav class="navbar navbar-inverse">
+     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#krishnaMenu" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     </div>
+     
+      <a class="navbar-brand" href="#">{{title}} {{header}}</a>
+      <div class="collapse navbar-collapse" id="krishnaMenu">
+        <ul class="nav navbar-nav navbar-right">     
+        <li><a [routerLink]="['Home']">Home <span class='glyphicon glyphicon-home'> </span></a></li>
+        <li><a [routerLink]="['Course',{cname:'Angular2',duration:'24hrs'}]">Courses <span class='glyphicon glyphicon-book'> </span> </a></li>
+        <li><a [routerLink]="['Trainers']">Trainers <span class='glyphicon glyphicon-sunglasses'> </span></a></li>
+        <li><a [routerLink]="['Login']">Login <span class='glyphicon glyphicon-user'> </span></a></li>
+        <li><a [routerLink]="['Service']">Services <span class='glyphicon glyphicon-wrench'> </span></a></li>
+        </ul>
+      </div>
+      </nav>
+</div>
 <!--create place holder to host content pages/content components-->
 <div>
+    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4 well">
+        <sidebar-comp>Side bar loading...</sidebar-comp>
+        </div>
+   <div class="col-lg-10 col-md-10 col-sm-9 col-xs-8">
+           
     <router-outlet>
             <!--all the content components like homecomponent,aboutcomponent will load here -->
     </router-outlet>
+    </div>
 </div>
